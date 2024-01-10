@@ -1,2 +1,4 @@
-package com.sergeymar4.crudhibernate.repositories;public class CourseRepository {
+package com.sergeymar4.crudhibernate.repositories;
+
+public class CourseRepository {
 }
