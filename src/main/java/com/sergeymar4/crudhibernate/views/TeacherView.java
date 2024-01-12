@@ -43,11 +43,11 @@ public class TeacherView {
                 int age = scanner.nextInt();
                 System.out.println("Введите специализацию преподавателя = ");
                 String specialization = scanner.next();
-                teacherController.update(id, firstName, lastName, age, specialization);
+                // teacherController.update(id, firstName, lastName, age, specialization);
             } else if (s.equals("4")) {
                 System.out.println("Введиет id студента = ");
                 int id = scanner.nextInt();
-                teacherController.delete(id);
+                // teacherController.delete(id);
             } else if (s.equals("5")) {
                 System.out.println("Введите имя преподавателя = ");
                 String firstName = scanner.next();

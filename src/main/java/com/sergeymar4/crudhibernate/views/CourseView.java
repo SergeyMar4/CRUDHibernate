@@ -35,7 +35,7 @@ public class CourseView {
             } else if (s.equals("3")) {
                 System.out.println("Введите название дисциплины = ");
                 String title = scanner.next();
-                System.out.println("Введите id = ");
+                System.out.println("Введите id учителя = ");
                 int id = scanner.nextInt();
                 courseController.create(title, id);
             } else if (s.equals("4")) {
@@ -43,11 +43,11 @@ public class CourseView {
                 int id = scanner.nextInt();
                 System.out.println("Введите название дисциплины = ");
                 String title = scanner.next();
-                courseController.update(id, title);
+                // courseController.update(id, title);
             } else if (s.equals("5")) {
                 System.out.println("Введите id дисциплины = ");
                 int id = scanner.nextInt();
-                courseController.delete(id);
+                // courseController.delete(id);
             } else {
                 break;
             }

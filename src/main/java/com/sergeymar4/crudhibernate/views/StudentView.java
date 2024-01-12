@@ -49,11 +49,11 @@ public class StudentView {
                 String lastName = scanner.next();
                 System.out.println("Введите возраст студента = ");
                 int age = scanner.nextInt();
-                studentController.update(id, firstName, lastName, age);
+                // studentController.update(id, firstName, lastName, age);
             } else if (s.equals("5")) {
                 System.out.println("Введите id студента = ");
                 int id = scanner.nextInt();
-                studentController.delete(id);
+                // studentController.delete(id);
             } else {
                 break;
             }

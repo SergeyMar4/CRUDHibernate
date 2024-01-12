@@ -2,9 +2,10 @@ package com.sergeymar4.crudhibernate.models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name="students")
+@Table(name="teachers")
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,8 +19,8 @@ public class Teacher {
     private String LastName;
     @Column(name = "specialization")
     private String specialization;
-    @OneToMany(mappedBy = "courses")
-    private ArrayList<Course> courses;
+    @OneToMany(mappedBy = "teacher")
+    private List<Course> courses;
 
     public int getId() {
         return id;
@@ -37,11 +38,11 @@ public class Teacher {
         this.age = age;
     }
 
-    public ArrayList<Course> getCourses() {
+    public List<Course> getCourses() {
         return courses;
     }
 
-    public void setCourses(ArrayList<Course> courses) {
+    public void setCourses(List<Course> courses) {
         this.courses = courses;
     }
 

@@ -13,7 +13,7 @@
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
         <!-- SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.SQLiteDialect</property>
+        <property name="dialect">org.sqlite.hibernate.dialect.SQLiteDialect</property>
 
         <mapping class="com.sergeymar4.crudhibernate.models.Course" />
         <mapping class="com.sergeymar4.crudhibernate.models.Student" />
