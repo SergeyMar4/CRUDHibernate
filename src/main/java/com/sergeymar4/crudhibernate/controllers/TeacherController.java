@@ -1,5 +1,6 @@
 package com.sergeymar4.crudhibernate.controllers;
 
+import com.sergeymar4.crudhibernate.models.Course;
 import com.sergeymar4.crudhibernate.models.Teacher;
 import com.sergeymar4.crudhibernate.repositories.TeacherRepository;
 
@@ -37,5 +38,9 @@ public class TeacherController {
         teacher.setLastName(lastName);
         teacher.setSpecialization(specialization);
         teacherRepository.create(teacher);
+    }
+
+    public List<Course> getAllCourseByTeacher(int teacher_id) {
+        return teacherRepository.getAllCourseByTeacher(teacher_id);
     }
 }

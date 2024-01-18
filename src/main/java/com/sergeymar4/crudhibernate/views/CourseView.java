@@ -43,7 +43,9 @@ public class CourseView {
                 int id = scanner.nextInt();
                 System.out.println("Введите название дисциплины = ");
                 String title = scanner.next();
-                // courseController.update(id, title);
+                System.out.println("Введите id учителя = ");
+                int teacher_id = scanner.nextInt();
+                courseController.update(id, title, teacher_id);
             } else if (s.equals("5")) {
                 System.out.println("Введите id дисциплины = ");
                 int id = scanner.nextInt();

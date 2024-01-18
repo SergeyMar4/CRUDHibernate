@@ -16,7 +16,8 @@ public class TeacherView {
                 "3.Обновить\n" +
                 "4.Удалить\n" +
                 "5.Создать\n" +
-                "6.Выйти в главное меню";
+                "6.Вывести все курсы по учителю\n" +
+                "7.Выйти в главное меню";
         this.scanner = scanner;
         this.teacherController = new TeacherController();
     }
@@ -58,6 +59,10 @@ public class TeacherView {
                 System.out.println("Введите специализацию преподавателя = ");
                 String specialization = scanner.next();
                 teacherController.create(firstName, lastName, age, specialization);
+            } else if (s.equals("6")) {
+                System.out.println("Введите id учителя = ");
+                int teacher_id = scanner.nextInt();
+                System.out.println(teacherController.getAllCourseByTeacher(teacher_id));
             } else {
                 break;
             }

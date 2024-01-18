@@ -14,6 +14,7 @@ public class CourseController {
 
     public CourseController() {
         this.courseRepository = new CourseRepository();
+        this.teacherRepository = new TeacherRepository();
     }
 
     public List<Course> getAll() {
@@ -31,10 +32,14 @@ public class CourseController {
         courseRepository.create(course);
     }
 
-    /* public void update(int id, String title) {
-        courseRepository.update(id, title);
+    public void update(int id, String title, int teacher_id) {
+        Course course = courseRepository.getById(id);
+        course.setTitle(title);
+        course.setTeacher(teacherRepository.getById(teacher_id));
+        courseRepository.update(course);
     }
 
+    /*
     public void delete(int id) {
         courseRepository.delete(id);
     }

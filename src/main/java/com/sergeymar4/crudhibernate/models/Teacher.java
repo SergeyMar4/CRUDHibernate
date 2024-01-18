@@ -19,7 +19,7 @@ public class Teacher {
     private String LastName;
     @Column(name = "specialization")
     private String specialization;
-    @OneToMany(mappedBy = "teacher")
+    @OneToMany(mappedBy = "teacher", fetch=FetchType.EAGER)
     private List<Course> courses;
 
     public int getId() {
@@ -78,7 +78,6 @@ public class Teacher {
                 ", firstName='" + firstName + '\'' +
                 ", LastName='" + LastName + '\'' +
                 ", specialization='" + specialization + '\'' +
-                ", courses=" + courses +
                 '}';
     }
 }
