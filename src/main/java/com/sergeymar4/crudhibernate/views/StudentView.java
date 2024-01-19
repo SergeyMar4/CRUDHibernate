@@ -16,7 +16,9 @@ public class StudentView {
                 "3.Создать\n" +
                 "4.Обновить\n" +
                 "5.Удалить\n" +
-                "6.Выйти в главное меню";
+                "6.Зачислить на курс\n" +
+                "7.Вывести всех студентов по определённому имени\n" +
+                "8.Выйти в главное меню";
         this.studentController = new StudentController();
         this.scanner = scanner;
     }
@@ -54,6 +56,16 @@ public class StudentView {
                 System.out.println("Введите id студента = ");
                 int id = scanner.nextInt();
                 // studentController.delete(id);
+            } else if (s.equals("6")) {
+                System.out.println("Введите id студента = ");
+                int student_id = scanner.nextInt();
+                System.out.println("Введите id курса = ");
+                int course_id = scanner.nextInt();
+                studentController.addCourse(student_id, course_id);
+            } else if (s.equals("7")) {
+                System.out.println("Введите имя студента = ");
+                String firstName = scanner.next();
+                System.out.println(studentController.getAllByFirstName(firstName));
             } else {
                 break;
             }

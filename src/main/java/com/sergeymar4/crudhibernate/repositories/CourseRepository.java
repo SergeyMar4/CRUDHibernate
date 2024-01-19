@@ -1,6 +1,7 @@
 package com.sergeymar4.crudhibernate.repositories;
 
 import com.sergeymar4.crudhibernate.models.Course;
+import com.sergeymar4.crudhibernate.models.Student;
 import com.sergeymar4.crudhibernate.utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
